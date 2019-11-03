@@ -86,6 +86,9 @@ set clipboard=unnamed,autoselect
 nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 " シンタックスハイライト
 syntax on
+" カラースキーム
+colorscheme molokai
+set t_Co=256
 " すべての数を10進数として扱う
 set nrformats=
 " 行をまたいで移動
