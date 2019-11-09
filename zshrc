@@ -1,6 +1,6 @@
 # prompt
-PROMPT='[%d]# '
-RPROMPT=''
+PROMPT='[kisaragi] # '
+RPROMPT='[%d]'
 
 # history
 HISTFILE=~/.zsh_history
@@ -15,5 +15,5 @@ alias la='ls -a'
 alias ll='ls -l'
 alias rm='rm -ri'
 alias mv='mv -i'
-
+alias kali='docker run -it --rm my-kali'
 
