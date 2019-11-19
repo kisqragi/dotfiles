@@ -77,7 +77,7 @@ set noswapfile
 " 検索にマッチした行以外を折りたたむ(フォールドする)機能
 set nofoldenable
 " タイトルを表示
-set title
+set notitle
 " 行番号の表示
 set number
 " ヤンクでクリップボードにコピー
