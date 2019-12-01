@@ -9,7 +9,7 @@ SAVEHIST=10000
 
 # alias configuration
 alias cp="cp -ri"
-alias ls='ls -aFG'
+alias ls='ls -FG'
 alias l='ls'
 alias la='ls -a'
 alias ll='ls -l'
