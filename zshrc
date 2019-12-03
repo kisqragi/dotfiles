@@ -8,6 +8,8 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 # alias configuration
+alias h="history"
+alias c="cd .."
 alias cp="cp -ri"
 alias ls='ls -FG'
 alias l='ls'
