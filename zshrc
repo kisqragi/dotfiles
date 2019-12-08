@@ -25,6 +25,9 @@ setopt share_history
 # ビープ音無効
 setopt no_beep
 
+# 補完時大文字小文字を区別しない
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
 # complementation 
 autoload -Uz compinit
 compinit
