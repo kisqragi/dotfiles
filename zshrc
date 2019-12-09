@@ -1,6 +1,6 @@
 # prompt
-#PROMPT='[%F{green}kisaragi%f:%F{blue}%d%f] # '
-PROMPT='%F{green}kisaragi%f:%F{blue}%~%f # '
+#PROMPT='%F{green}kisaragi%f:%F{blue}%~%f # '
+PROMPT='%F{green}%n%f:%F{blue}%~%f # '
 #RPROMPT='%F{blue}[%d]%f'
 RPROMPT=''
 
