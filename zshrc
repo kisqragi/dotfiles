@@ -44,4 +44,3 @@ alias rm='rm -ri'
 alias mv='mv -i'
 alias kali='docker run -it --rm my-kali'
 
-export PATH=$HOME/.nodebrew/node/v12.13.1/bin:$PATH
