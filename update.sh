@@ -35,6 +35,6 @@ do
     [[ "$f" == "update.sh" ]] && continue
 
     ln -snf $DOT_DIR/"$f" $HOME/".$f"
-    echo "Installed .$f"
+    echo "Updated .$f"
 done
 
