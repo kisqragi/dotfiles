@@ -1,4 +1,3 @@
-
 set clipboard=autoselect
 " ファイルを上書きする前にバックアップを作ることを無効化
 set nowritebackup
