@@ -97,7 +97,7 @@ set number
 set mouse=a
 
 " 文字がなくても移動できる設定
-set virtualedit=all
+"set virtualedit=all
 
 " 自動インデント
 set smartindent
@@ -174,3 +174,19 @@ let NERDTreeShowHidden = 1
 "-----------------------------------
                   
 set signcolumn=yes
+
+                  
+
+
+"-----------------------------------
+" preview_markdownの設定
+"-----------------------------------
+                  
+" 垂直分割
+let g:preview_markdown_vertical = 1
+
+" ファイル保存時、表示を自動修正
+let g:preview_markdown_auto_update = 1
+
+" 新規ターミナルを右側に表示
+set splitright
