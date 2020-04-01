@@ -147,7 +147,6 @@ if has('persistent_undo')
     if !isdirectory(undo_path)
         call mkdir(undo_path, 'p')
     endif
-	exe 'set undodir=' .. undo_path
 	set undofile
 endif
 
