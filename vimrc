@@ -62,7 +62,7 @@ endif
 colorscheme molokai
 
 " シンタックスハイライト
-syntax on
+syntax enable
 
 " Esc２回でハイライトを消す
 nmap <Esc><Esc> :nohl<CR>
@@ -101,6 +101,7 @@ set mouse=a
 
 " 自動インデント
 set smartindent
+set autoindent
 
 " ファイル名を常時表示
 set laststatus=2
@@ -140,6 +141,9 @@ set history=10000
 " 文字コードをUTF-8に設定
 set fenc=utf-8
 
+" 保存時にsudo権限で無理やり保存
+cnoremap w!! w !sudo tee > /dev/null %<CR> :e!<CR>
+
 " undoの永続化
 if has('persistent_undo')
 	let undo_path = expand('~/.vim/undo')
@@ -147,11 +151,12 @@ if has('persistent_undo')
     if !isdirectory(undo_path)
         call mkdir(undo_path, 'p')
     endif
+    exe 'set undodir=' . undo_path
 	set undofile
 endif
 
-
-
+" メッセージを英語化
+language C
 
 "-----------------------------------
 " NERDTreeの設定
