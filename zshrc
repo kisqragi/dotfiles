@@ -1,6 +1,5 @@
 # prompt
 PROMPT='%F{green}%n%f:%F{blue}%~%f # '
-#RPROMPT='%F{blue}[%d]%f'
 RPROMPT=''
 
 # history
@@ -33,6 +32,7 @@ compinit
 zstyle ':completion:*' menu select
 
 # alias configuration
+alias history="history -1000"
 alias h="history"
 alias c="cd .."
 alias cp="cp -ri"
@@ -42,5 +42,16 @@ alias la='ls -a'
 alias ll='ls -l'
 alias rm='rm -ri'
 alias mv='mv -i'
-alias kali='docker run -it --rm my-kali'
+alias g++='/usr/local/bin/g++-9'
+alias gcc='/usr/local/bin/gcc-9'
+alias compilerbook='docker run --rm -it -v $HOME/work/kcc:/kcc -v $HOME/work/chibicc:/chibicc -v $HOME/work/course2020:/course2020 compilerbook'
+alias lowlevel='docker run --rm -it -v $HOME/Desktop/study2020:/lowlevel lowlevel'
+
+# PATH
+export PATH="/usr/local/opt/binutils/bin:$PATH"
+
+# 初回シェル時のみ tmux実行
+if [ $SHLVL = 1 ]; then
+    tmux
+fi
 

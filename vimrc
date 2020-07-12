@@ -59,7 +59,7 @@ endif
 "-----------------------------------
 
 " カラースキーム
-colorscheme molokai
+colorscheme gruvbox
 
 " シンタックスハイライト
 syntax enable
@@ -76,7 +76,13 @@ nmap <Esc><Esc> :nohl<CR>
 " "-----------------------------------------------------------
 
 " tabキーでのインデント時半角スペースを挿入 
-set expandtab
+" Makefileの場合スペースではなくtabを挿入
+let _curfile=expand("%:r")
+if _curfile == 'Makefile' || _curfile == 'makefile'
+	set noexpandtab
+else
+	set expandtab
+endif
 
 " インデント幅
 set shiftwidth=4
@@ -100,7 +106,6 @@ set mouse=a
 "set virtualedit=all
 
 " 自動インデント
-set smartindent
 set autoindent
 
 " ファイル名を常時表示
@@ -120,7 +125,7 @@ set wildmenu
 "-----------------------------------
 
 " 小文字で検索するときだけ大小を無視する
-set smartcase
+set ignorecase
 
 " インクリメンタルサーチ(1文字入力毎に検索)
 set incsearch
@@ -151,9 +156,22 @@ if has('persistent_undo')
     if !isdirectory(undo_path)
         call mkdir(undo_path, 'p')
     endif
-    exe 'set undodir=' . undo_path
+	exe 'set undodir=' . undo_path
 	set undofile
 endif
+
+" 前回開いたカーソル位置から再開
+augroup vimrcEx
+  au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
+  \ exe "normal g`\"" | endif
+augroup END
+
+" カーソルを末尾から次の行の先頭
+" 行の先頭から前の末尾へ移動できるようにする
+set whichwrap=b,s,h,l,<,>,[,],~
+
+" 補完表示時のEnterで改行をしない
+inoremap <expr><CR>  pumvisible() ? "<C-y>" : "<CR>"
 
 " メッセージを英語化
 language C
