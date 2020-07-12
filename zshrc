@@ -36,7 +36,7 @@ alias history="history -1000"
 alias h="history"
 alias c="cd .."
 alias cp="cp -ri"
-alias ls='ls -FG'
+alias ls='ls -FG --color=auto'
 alias l='ls'
 alias la='ls -a'
 alias ll='ls -l'
