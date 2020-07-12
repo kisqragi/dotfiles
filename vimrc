@@ -59,6 +59,7 @@ endif
 "-----------------------------------
 
 " カラースキーム
+set background=dark
 colorscheme gruvbox
 
 " シンタックスハイライト
