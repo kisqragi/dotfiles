@@ -24,15 +24,6 @@ if [ ! -d ${DOT_DIR} ]; then
         exit 1
     fi
 
-    if [ $(uname) == "Linux" ]; then
-        DOT_DIR="$DOT_DIR/linux"
-    elif [ $(uname) == "Darwin" ]; then
-        DOT_DIR="$DOT_DIR/mac"
-    else
-        echo "Unknown OS"
-        exit 1
-    fi
-
     cd ${DOT_DIR}
     for f in *;
     do
