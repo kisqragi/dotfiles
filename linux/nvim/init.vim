@@ -22,7 +22,7 @@ if dein#load_state(s:dein_dir)
     call dein#begin(s:dein_dir)
 
     " .toml file
-    let s:rc_dir = expand('~/.vim')
+    let s:rc_dir = expand('~/.config/nvim')
     if !isdirectory(s:rc_dir)
         call mkdir(s:rc_dir, 'p')
     endif
@@ -30,6 +30,9 @@ if dein#load_state(s:dein_dir)
 
     " read toml and cache
     call dein#load_toml(s:toml, {'lazy': 0})
+    
+    " add colorscheme
+    call dein#add('morhetz/gruvbox')
 
     " end settings
     call dein#end()
@@ -61,9 +64,6 @@ endif
 " カラースキーム
 set background=dark
 colorscheme gruvbox
-
-" シンタックスハイライト
-syntax enable
 
 " Esc２回でハイライトを消す
 nmap <Esc><Esc> :nohl<CR>
@@ -106,9 +106,6 @@ set mouse=a
 " 文字がなくても移動できる設定
 "set virtualedit=all
 
-" 自動インデント
-set autoindent
-
 " ファイル名を常時表示
 set laststatus=2
 
@@ -131,9 +128,6 @@ set ignorecase
 " インクリメンタルサーチ(1文字入力毎に検索)
 set incsearch
 
-" 検索結果をハイライト
-set hlsearch
- 
 
 
 
@@ -151,15 +145,7 @@ set fenc=utf-8
 cnoremap w!! w !sudo tee > /dev/null %<CR> :e!<CR>
 
 " undoの永続化
-if has('persistent_undo')
-	let undo_path = expand('~/.vim/undo')
-    " ディレクトリが存在しない場合は作成
-    if !isdirectory(undo_path)
-        call mkdir(undo_path, 'p')
-    endif
-	exe 'set undodir=' . undo_path
-	set undofile
-endif
+set undofile
 
 " 前回開いたカーソル位置から再開
 augroup vimrcEx

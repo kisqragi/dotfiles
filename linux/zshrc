@@ -1,5 +1,4 @@
-# prompt
-PROMPT='%F{green}%n%f:%F{blue}%~%f # '
+PROMPT='%F{40}%n%f:%F{079}%~%f # '
 RPROMPT=''
 
 # history
@@ -42,9 +41,7 @@ alias la='ls -a'
 alias ll='ls -l'
 alias rm='rm -ri'
 alias mv='mv -i'
+alias vim='nvim'
 
-# 初回シェル時のみ tmux実行
-if [ $SHLVL = 1 ]; then
-    tmux
-fi
-
+# PATH
+export XDG_CONFIG_HOME=$HOME/.config

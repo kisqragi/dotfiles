@@ -41,7 +41,14 @@ if [ ! -d ${DOT_DIR} ]; then
         [[ "$f" == ".DS_Store" ]] && continue
         [[ "$f" == "README.md" ]] && continue
         [[ "$f" == "install.sh" ]] && continue
-        [[ "$f" == "update.sh" ]] && continue
+
+        if [ "$f" == "nvim" ]; then
+            if [ ! -d "$HOME/.config" ]; then
+                mkdir "$HOME/.config"
+            fi
+            ln -snf $DOT_DIR/"$f" "$HOME/.config/$f"
+            continue
+        fi
 
         ln -snf $DOT_DIR/"$f" $HOME/".$f"
         echo "Installed .$f"
