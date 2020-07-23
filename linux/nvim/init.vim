@@ -85,6 +85,9 @@ else
 	set expandtab
 endif
 
+" インデント種類
+set smartindent
+
 " インデント幅
 set shiftwidth=4
 
@@ -159,6 +162,17 @@ set whichwrap=b,s,h,l,<,>,[,],~
 
 " 補完表示時のEnterで改行をしない
 inoremap <expr><CR>  pumvisible() ? "<C-y>" : "<CR>"
+
+set completeopt=menuone,noinsert
+inoremap <expr><C-n> pumvisible() ? "<Down>" : "<C-n>"
+inoremap <expr><C-p> pumvisible() ? "<Up>" : "<C-p>"
+
+" if () { <- 入力後ここにカーソルがある場合にEnterを押すと
+"    | <- カーソル位置がここになり
+" } <- 括弧が自動挿入される
+inoremap {<Enter> {}<Left><CR><ESC><S-o>
+inoremap [<Enter> []<Left><CR><ESC><S-o>
+inoremap (<Enter> ()<Left><CR><ESC><S-o>
 
 " メッセージを英語化
 language C
