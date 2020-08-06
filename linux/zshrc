@@ -46,3 +46,6 @@ alias vim='nvim'
 # PATH
 export XDG_CONFIG_HOME=$HOME/.config
 export PATH="$PATH:/snap/bin"
+
+# zコマンド
+. ~/z/z.sh

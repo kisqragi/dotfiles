@@ -27,3 +27,6 @@ rev="release"
 hook_source = '''
 source ~/.config/nvim/coc.rc.vim
 '''
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
