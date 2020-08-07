@@ -1,11 +1,5 @@
 [[plugins]]
-repo = 'mattn/vim-maketable'
-
-[[plugins]]
 repo = 'markonm/traces.vim'
-
-[[plugins]]
-repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'

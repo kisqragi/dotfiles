@@ -226,3 +226,6 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" [markonm/traces.vim]を利用するために無効
+set inccommand=nosplit
