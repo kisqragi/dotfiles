@@ -42,6 +42,10 @@ alias ll='ls -l'
 alias rm='rm -ri'
 alias mv='mv -i'
 alias vim='nvim'
+alias gs='git status'
+alias gc='git commit'
+alias gl='git log'
+alias ga='git add'
 
 # PATH
 export XDG_CONFIG_HOME=$HOME/.config

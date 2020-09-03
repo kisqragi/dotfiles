@@ -9,6 +9,11 @@
            "directory": "/tmp/ccls-cache"
          }
        }
+    },
+    "rust": {
+      "command": "rustup",
+      "args": ["run", "stable", "rls"],
+      "filetypes": ["rust"]
     }
   },
   "suggest.keepCompleteopt": true

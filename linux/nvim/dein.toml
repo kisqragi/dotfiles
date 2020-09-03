@@ -24,3 +24,10 @@ source ~/.config/nvim/coc.rc.vim
 
 [[plugins]]
 repo = 'cohama/lexima.vim'
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+hook_add = '''
+let g:rustfmt_autosave = 0
+'''
+on_ft = ['rust']

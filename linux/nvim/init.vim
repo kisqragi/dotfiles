@@ -103,6 +103,10 @@ set showmatch
 " 行番号表示
 set number
 
+" 相対行を表示
+set relativenumber
+
+
 " スクロールをファイル内のみに設定
 set mouse=a
 
@@ -208,12 +212,6 @@ let g:preview_markdown_auto_update = 1
 set splitright
 
 set updatetime=300
-
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
