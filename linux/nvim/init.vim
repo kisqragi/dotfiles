@@ -164,13 +164,6 @@ augroup END
 " 行の先頭から前の末尾へ移動できるようにする
 set whichwrap=b,s,h,l,<,>,[,],~
 
-" 補完表示時のEnterで改行をしない
-inoremap <expr><CR>  pumvisible() ? "<C-y>" : "<CR>"
-
-set completeopt=menuone,noinsert
-inoremap <expr><C-n> pumvisible() ? "<Down>" : "<C-n>"
-inoremap <expr><C-p> pumvisible() ? "<Up>" : "<C-p>"
-
 " メッセージを英語化
 language C
 

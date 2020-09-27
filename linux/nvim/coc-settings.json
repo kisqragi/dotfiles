@@ -1,20 +1,4 @@
 {
-  "languageserver": {
-    "ccls": {
-      "command": "ccls",
-      "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
-      "rootPatterns": [".ccls-root", "compile_commands.json"],
-      "initializationOptions": {
-         "cache": {
-           "directory": "/tmp/ccls-cache"
-         }
-       }
-    },
-    "rust": {
-      "command": "rustup",
-      "args": ["run", "stable", "rls"],
-      "filetypes": ["rust"]
-    }
-  },
-  "suggest.keepCompleteopt": true
+"suggest.noselect": false,
+"clangd.path": "/home/vagrant/.config/coc/extensions/coc-clangd-data/install/10.0.0/clangd_10.0.0/bin/clangd"
 }
