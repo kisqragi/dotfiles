@@ -2,9 +2,6 @@
 repo = 'mattn/vim-maketable'
 
 [[plugins]]
-repo = 'markonm/traces.vim'
-
-[[plugins]]
 repo = 'skanehira/translate.vim'
 
 [[plugins]]

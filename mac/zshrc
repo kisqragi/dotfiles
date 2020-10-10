@@ -42,16 +42,10 @@ alias la='ls -a'
 alias ll='ls -l'
 alias rm='rm -ri'
 alias mv='mv -i'
-alias g++='/usr/local/bin/g++-9'
-alias gcc='/usr/local/bin/gcc-9'
+alias g++='/usr/local/bin/g++-10'
+alias gcc='/usr/local/bin/gcc-10'
 alias compilerbook='docker run --rm -it -v $HOME/work/kcc:/kcc -v $HOME/work/chibicc:/chibicc -v $HOME/work/course2020:/course2020 compilerbook'
 alias lowlevel='docker run --rm -it -v $HOME/Desktop/study2020:/lowlevel lowlevel'
 
 # PATH
 export PATH="/usr/local/opt/binutils/bin:$PATH"
-
-# 初回シェル時のみ tmux実行
-if [ $SHLVL = 1 ]; then
-    tmux
-fi
-

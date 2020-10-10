@@ -41,18 +41,19 @@ if [ ! -d ${DOT_DIR} ]; then
         [[ "$f" == ".DS_Store" ]] && continue
         [[ "$f" == "README.md" ]] && continue
         [[ "$f" == "install.sh" ]] && continue
-
-        if [ "$f" == "nvim" ]; then
-            if [ ! -d "$HOME/.config" ]; then
-                mkdir "$HOME/.config"
-            fi
-            ln -snf $DOT_DIR/"$f" "$HOME/.config/$f"
-            continue
-        fi
+        [[ "$f" == "yabai" ]] && continue
 
         ln -snf $DOT_DIR/"$f" $HOME/".$f"
         echo "Installed .$f"
     done
+
+    if [ $(uname) == "Darwin" ]; then
+        ln -s "${DOT_DIR}/yabai/skhdrc/ $HOME/.skhdrc"
+        ln -s "${DOT_DIR}/yabai/yabairc/ $HOME/.yabairc"
+        mkdir "$HOME/.config/yabai"
+        cp "${DOT_DIR}/yabai/open_iterm2.sh $HOME/.config/yabai/open_iterm2.sh"
+        chmod +x "$HOME/.config/yabai/open_iterm2.sh"
+    fi
 else
     echo "dotfiles already exists"
     exit 1

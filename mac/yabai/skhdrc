@@ -1,0 +1,34 @@
+# open terminal
+cmd - return : $HOME/.config/yabai/open_iterm2.sh
+
+# focus window
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+# move window
+cmd - h : yabai -m window --swap west
+cmd - j : yabai -m window --swap south
+cmd - k : yabai -m window --swap north
+cmd - l : yabai -m window --swap east
+
+# resize window
+shift + ctrl - h : \
+yabai -m window --resize left:-50:0 ; \
+yabai -m window --resize right:-50:0
+
+shift + ctrl - j : \
+yabai -m window --resize bottom:0:50 ; \
+yabai -m window --resize top:0:50
+
+shift + ctrl - k : \
+yabai -m window --resize top:0:-50 ; \
+yabai -m window --resize bottom:0:-50
+
+shift + ctrl - l : \
+yabai -m window --resize right:50:0 ; \
+yabai -m window --resize left:50:0
+
+# Float / Unfloat window
+shift + alt - space : yabai -m window --toggle float
