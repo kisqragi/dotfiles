@@ -51,7 +51,7 @@ if [ ! -d ${DOT_DIR} ]; then
         ln -s "${DOT_DIR}/yabai/skhdrc/ $HOME/.skhdrc"
         ln -s "${DOT_DIR}/yabai/yabairc/ $HOME/.yabairc"
         mkdir "$HOME/.config/yabai"
-        cp "${DOT_DIR}/yabai/open_iterm2.sh $HOME/.config/yabai/open_iterm2.sh"
+        cp "${DOT_DIR}/yabai/open_iterm2.sh" "$HOME/.config/yabai/open_iterm2.sh"
         chmod +x "$HOME/.config/yabai/open_iterm2.sh"
     fi
 else
