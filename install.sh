@@ -42,6 +42,7 @@ if [ ! -d ${DOT_DIR} ]; then
         [[ "$f" == "README.md" ]] && continue
         [[ "$f" == "install.sh" ]] && continue
         [[ "$f" == "yabai" ]] && continue
+        [[ "$f" == "nvim" ]] && continue
 
         ln -snf $DOT_DIR/"$f" $HOME/".$f"
         echo "Installed .$f"
@@ -55,6 +56,9 @@ if [ ! -d ${DOT_DIR} ]; then
         chmod +x "$HOME/.config/yabai/open_iterm2.sh"
         mkdir -p $HOME/.config/git
         echo ".DS_Store" >> $HOME/.config/git/ignore
+    else
+        mkdir $HOME/.config
+        ln -s "${DOT_DIR}/nvim/ $HOME/.config/nvim"
     fi
 else
     echo "dotfiles already exists"
