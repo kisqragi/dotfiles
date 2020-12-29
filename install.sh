@@ -53,6 +53,8 @@ if [ ! -d ${DOT_DIR} ]; then
         mkdir -p "$HOME/.config/yabai"
         cp "${DOT_DIR}/yabai/open_iterm2.sh" "$HOME/.config/yabai/open_iterm2.sh"
         chmod +x "$HOME/.config/yabai/open_iterm2.sh"
+        mkdir -p $HOME/.config/git
+        echo ".DS_Store" >> $HOME/.config/git/ignore
     fi
 else
     echo "dotfiles already exists"
