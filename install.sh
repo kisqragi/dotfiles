@@ -58,7 +58,7 @@ if [ ! -d ${DOT_DIR} ]; then
         echo ".DS_Store" >> $HOME/.config/git/ignore
     else
         mkdir $HOME/.config
-        ln -s "${DOT_DIR}/nvim/ $HOME/.config/nvim"
+        ln -s "${DOT_DIR}/nvim" "$HOME/.config/nvim"
     fi
 else
     echo "dotfiles already exists"
