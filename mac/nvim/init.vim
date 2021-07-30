@@ -16,8 +16,8 @@ if dein#load_state('$HOME/.config/nvim/dein')
   let s:toml      = s:toml_dir . '/dein.toml'
   let s:lazy_toml = s:toml_dir . '/dein_lazy.toml'
 
-  call dein#load_toml(s:toml, {'laze' : 0})
-"  call dein#load_toml(s:lazy_toml, {'laze' : 1})
+  call dein#load_toml(s:toml, {'lazy' : 0})
+"  call dein#load_toml(s:lazy_toml, {'lazy' : 1})
 
   call dein#end()
   call dein#save_state()
