@@ -1,3 +1,12 @@
+" coc.nvim--------------------------------
+set updatetime=300
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <silent> go <C-o>
+"-----------------------------------------
+
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved

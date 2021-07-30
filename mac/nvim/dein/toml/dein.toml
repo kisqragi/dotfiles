@@ -16,3 +16,8 @@ repo = 'Shougo/defx.nvim'
 
 [[plugins]]
 repo = 'kristijanhusak/defx-icons'
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+merged = 0
+rev = "release"
