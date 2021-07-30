@@ -9,13 +9,7 @@ depends = ['vim-airline-themes']
 repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
-repo = 'ryanoasis/vim-devicons'
-
-[[plugins]]
 repo = 'Shougo/defx.nvim'
-
-[[plugins]]
-repo = 'kristijanhusak/defx-icons'
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'

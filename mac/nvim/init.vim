@@ -57,7 +57,6 @@ call defx#custom#option('_', {
       \ 'buffer_name': 'exlorer',
       \ 'toggle': 1,
       \ 'resume': 1,
-      \ 'columns': 'indent:icons:filename:mark',
       \ })
 
 autocmd FileType defx call s:defx_my_settings()
@@ -79,15 +78,14 @@ function! s:defx_my_settings() abort
   \ defx#do_action('preview')
   nnoremap <silent><buffer><expr> o
   \ defx#do_action('open_tree', 'toggle')
+  nnoremap <silent><buffer><expr> O
+  \ defx#do_action('close_tree')
   nnoremap <silent><buffer><expr> K
   \ defx#do_action('new_directory')
   nnoremap <silent><buffer><expr> N
   \ defx#do_action('new_file')
   nnoremap <silent><buffer><expr> M
   \ defx#do_action('new_multiple_files')
-  nnoremap <silent><buffer><expr> C
-  \ defx#do_action('toggle_columns',
-  \                'mark:indent:icon:filename:type:size:time')
   nnoremap <silent><buffer><expr> S
   \ defx#do_action('toggle_sort', 'time')
   nnoremap <silent><buffer><expr> d
