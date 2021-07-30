@@ -5,6 +5,8 @@ set expandtab
 " search
 set ignorecase
 set smartcase
+" highlight off
+nmap <Esc><Esc> :nohl<CR>
 " undo
 if has('persistent_undo')
   let undo_path = expand('~/.config/nvim/undo')
