@@ -50,3 +50,8 @@ if has('persistent_undo')
   exe 'set undodir=' .. undo_path
   set undofile
 endif
+" Exit terminal's insert mode with Esc.
+command! -nargs=* T  split | wincmd j | terminal <args>
+command! -nargs=* VT vsplit | terminal <args>
+autocmd TermOpen * startinsert
+tnoremap <Esc> <C-\><C-n>
