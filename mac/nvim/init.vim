@@ -34,24 +34,33 @@ endif
 "End dein Scripts-------------------------
 
 
-
-" indent
+" indent----------------------------------
 set tabstop=2
 set shiftwidth=2
 set expandtab
-" search
+" ----------------------------------------
+
+" search----------------------------------
 set ignorecase
 set smartcase
-" highlight off
+" ----------------------------------------
+
+" highlight off---------------------------
 nmap <Esc><Esc> :nohl<CR>
-" undo
+" ----------------------------------------
+
+" Persistence of undo---------------------
 if has('persistent_undo')
   let undo_path = expand('~/.config/nvim/undo')
   exe 'set undodir=' .. undo_path
   set undofile
 endif
-" Exit terminal's insert mode with Esc.
+" ----------------------------------------
+
+" terminal settings-----------------------
 command! -nargs=* T  split | wincmd j | terminal <args>
 command! -nargs=* VT vsplit | terminal <args>
 autocmd TermOpen * startinsert
+" Exit terminal's insert mode with Esc.---
 tnoremap <Esc> <C-\><C-n>
+" ----------------------------------------
