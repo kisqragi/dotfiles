@@ -24,3 +24,6 @@ repo = 'skanehira/preview-markdown.vim'
 
 [[plugins]]
 repo = 'cohama/lexima.vim'
+
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
