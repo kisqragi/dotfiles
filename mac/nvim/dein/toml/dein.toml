@@ -21,3 +21,6 @@ repo = 'mattn/vim-maketable'
 
 [[plugins]]
 repo = 'skanehira/preview-markdown.vim'
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
