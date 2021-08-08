@@ -69,7 +69,10 @@ autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
   " Define mappings
   nnoremap <silent><buffer><expr> <CR>
-  \ defx#do_action('open')
+  \ defx#is_directory() ?
+  \  defx#do_action('open_directory') :
+  \  defx#do_action('multi', ['drop', 'quit'])
+"  \ defx#do_action('open')
   nnoremap <silent><buffer><expr> c
   \ defx#do_action('copy')
   nnoremap <silent><buffer><expr> m
