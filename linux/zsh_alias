@@ -1,1 +1,11 @@
 alias h='history'
+
+alias ls='ls --color=auto'
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
+
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gl='git log'
