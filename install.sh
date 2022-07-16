@@ -8,7 +8,7 @@ has() {
 
 if [ ! -d ${DOT_DIR} ]; then
     if has "git"; then
-        git clone https://github.com/kisqragi/dotfiles.git ${DOT_DIR}
+        git clone git@github.com:kisqragi/dotfiles.git ${DOT_DIR}
     elif has "curl" || has "wget"; then
         TARBALL="https://github.com/kisqragi/dotfiles/archive/master.tar.gz"
         if has "curl"; then
@@ -56,9 +56,6 @@ if [ ! -d ${DOT_DIR} ]; then
         chmod +x "$HOME/.config/yabai/open_iterm2.sh"
         mkdir -p $HOME/.config/git
         echo ".DS_Store" >> $HOME/.config/git/ignore
-    else
-        mkdir $HOME/.config
-        ln -s "${DOT_DIR}/nvim" "$HOME/.config/nvim"
     fi
 else
     echo "dotfiles already exists"
