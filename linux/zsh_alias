@@ -10,4 +10,4 @@ alias ga='git add'
 alias gc='git commit'
 alias gl='git log'
 
-alias thm='sudo sh -c "openvpn $HOME/Desktop/kisqragi.ovpn &"'
+alias thm='sudo sh -c "pkill openvpn || openvpn $HOME/Desktop/kisqragi.ovpn &"'
