@@ -5,9 +5,12 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias less='less -R'
+
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
 alias gl='git log'
 
-alias thm='sudo sh -c "pkill openvpn || openvpn $HOME/Desktop/kisqragi.ovpn &"'
+alias thm='sudo sh -c "pkill openvpn; openvpn $HOME/Desktop/kisqragi.ovpn &"'
+alias thmip='(){ echo IP=$1 >> ~/.zsh_thmip && IP=$1 }'
